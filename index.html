@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Operación Sombra Lúcida</title>
+  
+<style>
+body {
+  background: #000;
+  color: #00ff99;
+  font-family: 'Share Tech Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+h1 {
+  font-size: 2rem;
+}
+.code-block {
+  background: rgba(0, 255, 153, 0.1);
+  border: 1px dashed #00ff99;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+input, button {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background-color: #001f1f;
+  color: #00ff99;
+  border: 1px solid #00ff99;
+  border-radius: 5px;
+}
+</style>
+
+</head>
+<body>
+  <h1>OPERACIÓN SOMBRA LÚCIDA</h1>
+  <div class="code-block">
+    01001100 01110101 01100011 01101001 01100100 01101001 01110100 01111001
+  </div>
+  <input type="text" id="clave" placeholder="Introduzca la clave de cifrado">
+  <button onclick="verificarClave()">Acceso</button>
+  <script>
+    function verificarClave() {
+      var clave = document.getElementById("clave").value;
+      if (clave === "lucidity") {
+        window.location.href = "phase2.html";
+      } else {
+        alert("Clave incorrecta.");
+      }
+    }
+  </script>
+</body>
+</html>
